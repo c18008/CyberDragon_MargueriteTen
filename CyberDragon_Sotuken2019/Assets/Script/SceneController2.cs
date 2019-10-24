@@ -14,11 +14,30 @@ public class SceneController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(0f, 0f, 0.1f);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(0f, 0f, -0.1f);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(-0.1f, 0f, 0f);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(0.1f, 0f, 0f);
+        }
+
+        Vector3 pos = transform.position;
+        if((pos.z > 53) || (pos.z < -53))
+        {
+            SceneManager.LoadScene("battle");
+        }
+
+        transform.position = pos;
     }
 
-    public void OnClick()
-    {
-        SceneManager.LoadScene("title");
-    }
 }

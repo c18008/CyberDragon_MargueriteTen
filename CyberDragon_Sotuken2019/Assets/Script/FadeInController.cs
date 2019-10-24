@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeInController : MonoBehaviour
 {
-    float fadeSpeed = 0.015f;     //透明度が変わるスピードを管理
+    float fadeSpeed = 0.02f;     //透明度が変わるスピードを管理
     float red, green, blue, alpha;   //パネルの色、不透明度を管理
     public bool isFadeIn = false;   //フェードイン処理の開始、完了を管理するフラグ
     Image fadeImage;                //透明度を変更するパネルのイメージ
